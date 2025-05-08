@@ -1,0 +1,27 @@
+{
+  "name": "pokedex",
+  "version": "1.0.0",
+  "description": "API de Pokenéas colombianos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"No test defined yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JPZU/Pokedex.git"
+  },
+  "author": "Juan Pablo Zuluaga Peláez - Marcela Londoño",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JPZU/Pokedex/issues"
+  },
+  "homepage": "https://github.com/JPZU/Pokedex#readme",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
