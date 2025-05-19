@@ -10,10 +10,8 @@ class PokeneaService {
    * Returns all records along with container information.
    */
   getAllWithContainerInfo() {
-    const containerId = os.hostname();
-
     return {
-      containerId,
+      containerId: os.hostname(),
       message: "All Pokenea data",
       data: this.pokenea,
     };
