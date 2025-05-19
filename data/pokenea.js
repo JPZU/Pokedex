@@ -105,6 +105,13 @@ let pokenea = {
     image: "",
     philosophical_phrase: "Cada personaje deja una huella en mí.",
   },
+  15: {
+    name: "Altafulla",
+    heigth: "1.80m",
+    ability: "Actuación con impacto",
+    image: "",
+    philosophical_phrase: "Cada video es una oportunidad de cambiar tu día.",
+  },
 };
 
 module.exports = pokenea;
