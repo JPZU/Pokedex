@@ -4,6 +4,7 @@ const pokeneaData = require("../data/pokenea");
 class PokeneaService {
   constructor() {
     this.pokenea = pokeneaData;
+    this.containerId = os.hostname();
   }
 
   /**
@@ -11,7 +12,7 @@ class PokeneaService {
    */
   getAllWithContainerInfo() {
     return {
-      containerId: os.hostname(),
+      container_id: this.containerId,
       message: "All Pokenea data",
       data: this.pokenea,
     };
@@ -29,6 +30,7 @@ class PokeneaService {
     );
 
     return {
+      container_id: this.containerId,
       message: "Pokenea images and phrases",
       data,
     };
