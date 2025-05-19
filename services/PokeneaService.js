@@ -1,4 +1,4 @@
-const fs = require("fs");
+const os = require("os");
 const pokenea = require("../data/pokenea"); // asumiendo que cargas desde archivo
 
 class PokeneaService {
@@ -9,11 +9,7 @@ class PokeneaService {
   getAllWithContainerInfo() {
     let containerId = "unknown";
     try {
-      const cgroup = fs.readFileSync("/proc/self/cgroup", "utf8");
-      const match = cgroup.match(/(?:^|\n)[\d]+:[\w=]+:\/docker\/([0-9a-f]+)/);
-      if (match) {
-        containerId = match[1].substring(0, 12);
-      }
+      containerId = os.hostname();
     } catch (err) {
       console.warn("Could not read container ID: ", err.message);
     }
